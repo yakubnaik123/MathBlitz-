@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="Free calculation speed practice in multiple Indian languages.">
+  <title>MathBlitz — Think Fast. Calculate Faster.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="MathBlitz home"><span class="bolt">⚡</span> MathBlitz</a>
+    <label class="language-wrap">
+      <span class="sr-only">Choose language</span>
+      <select id="language" aria-label="Choose language">
+        <option value="en">English</option><option value="te">తెలుగు</option>
+        <option value="hi">हिन्दी</option><option value="ta">தமிழ்</option>
+        <option value="kn">ಕನ್ನಡ</option><option value="ml">മലയാളം</option>
+        <option value="bn">বাংলা</option><option value="mr">मराठी</option>
+      </select>
+    </label>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <p class="eyebrow" id="eyebrow">FREE SPEED MATHS PRACTICE</p>
+      <h1 id="headline">Think Fast.<br><span>Calculate Faster.</span></h1>
+      <p class="sub" id="intro">Build calculation speed, one small challenge at a time.</p>
+    </section>
+
+    <section class="stats" aria-label="Your progress">
+      <article class="stat"><span id="stat1label">Questions solved</span><strong id="solved">0</strong></article>
+      <article class="stat"><span id="stat2label">Accuracy</span><strong id="accuracy">—</strong></article>
+      <article class="stat"><span id="stat3label">Best streak</span><strong id="streak">0</strong></article>
+    </section>
+
+    <section class="section-heading">
+      <div><p class="eyebrow" id="practiceEyebrow">LET'S PRACTICE</p><h2 id="chooseTopic">Choose a topic</h2></div>
+      <span class="free-tag" id="freeTag">100% Free</span>
+    </section>
+
+    <section class="mode-panel">
+      <div class="mode-heading">
+        <div><p class="eyebrow">PICK YOUR MODE</p><h2>How do you want to practise?</h2></div>
+      </div>
+      <div class="mode-grid">
+        <button class="mode-btn active" data-mode="speed"><b>⚡ 10-Second Sprint</b><small>One question at a time</small></button>
+        <button class="mode-btn" data-mode="minute"><b>⏱ 1-Minute Challenge</b><small>Solve as many as you can</small></button>
+      </div>
+    </section>
+
+    <section class="section-heading compact-heading">
+      <div><p class="eyebrow" id="practiceEyebrow2">PRACTICE CATEGORIES</p><h2 id="chooseTopic2">Choose a topic</h2></div>
+    </section>
+    <section class="topics" id="topics">
+      <button class="topic selected" data-topic="addition"><span class="topic-icon">＋</span><span>Addition</span><small>Beginner</small></button>
+      <button class="topic" data-topic="subtraction"><span class="topic-icon">−</span><span>Subtraction</span><small>Beginner</small></button>
+      <button class="topic" data-topic="multiplication"><span class="topic-icon">×</span><span>Multiplication</span><small>Intermediate</small></button>
+      <button class="topic" data-topic="division"><span class="topic-icon">÷</span><span>Division</span><small>Intermediate</small></button>
+      <button class="topic" data-topic="mixed"><span class="topic-icon">±</span><span>Mixed operations</span><small>All four operations</small></button>
+      <button class="topic" data-topic="simplification"><span class="topic-icon">∑</span><span>Simplification</span><small>BODMAS</small></button>
+      <button class="topic" data-topic="squares"><span class="topic-icon">x²</span><span>Squares</span><small>Square values</small></button>
+      <button class="topic" data-topic="cubes"><span class="topic-icon">x³</span><span>Cubes</span><small>Cube values</small></button>
+      <button class="topic" data-topic="roots"><span class="topic-icon">√</span><span>Square roots</span><small>Perfect squares</small></button>
+      <button class="topic" data-topic="percentages"><span class="topic-icon">%</span><span>Percentages</span><small>Quick calculations</small></button>
+      <button class="topic" data-topic="algebra"><span class="topic-icon">a+b</span><span>Algebra formulas</span><small>Identities</small></button>
+      <button class="topic" data-topic="trigonometry"><span class="topic-icon">θ</span><span>Trigonometry</span><small>Standard values</small></button>
+      <button class="topic" data-topic="alphabet"><span class="topic-icon">A=1</span><span>Alphabet values</span><small>A=1, B=2, C=3</small></button>
+      <button class="topic" data-topic="reverse"><span class="topic-icon">Z=1</span><span>Reverse alphabet</span><small>A=26, B=25</small></button>
+    </section>
+
+    <section class="challenge card" id="practiceCard">
+      <div class="challenge-top">
+        <div><p class="eyebrow" id="challengeLabel">QUICK PRACTICE</p><h2 id="challengeTitle">Ready, set, calculate!</h2><p class="mode-hint" id="modeHint">You have 10 seconds for each question.</p></div>
+        <div class="timer"><span>⏱</span> <strong id="timer">10</strong><small id="seconds">sec</small></div>
+      </div>
+      <div class="question" id="question">12 + 8 = ?</div>
+      <form id="answerForm" class="answer-form">
+        <input id="answer" type="text" inputmode="decimal" autocomplete="off" placeholder="Your answer" aria-label="Your answer">
+        <button class="primary" id="submit" type="submit">Start practice</button>
+      </form>
+      <div class="action-row"><button class="text-button" id="skip" type="button">Skip question →</button><button class="text-button" id="restart" type="button">Restart session</button></div>
+      <p class="feedback" id="feedback" aria-live="polite">Press Start practice when you're ready.</p>
+      <div class="challenge-bottom">
+        <span><b id="sessionCorrect">0</b> correct</span>
+        <span><b id="sessionWrong">0</b> wrong</span>
+        <span><b id="sessionSkipped">0</b> skipped</span>
+        <span><b id="sessionAttempted">0</b> attempted</span>
+      </div>
+    </section>
+
+    <section class="result-card card" id="resultCard" hidden>
+      <p class="eyebrow">SESSION COMPLETE</p><h2>Your results</h2>
+      <div class="result-grid">
+        <div><strong id="resultAttempted">0</strong><span>Attempted</span></div>
+        <div><strong id="resultCorrect">0</strong><span>Correct</span></div>
+        <div><strong id="resultWrong">0</strong><span>Wrong</span></div>
+        <div><strong id="resultSkipped">0</strong><span>Skipped</span></div>
+        <div><strong id="resultAccuracy">0%</strong><span>Accuracy</span></div>
+        <div><strong id="resultRate">0</strong><span>Correct / min</span></div>
+      </div>
+      <p class="best-line">Personal best: <b id="personalBest">0</b> correct answers</p>
+      <button class="primary retry" id="playAgain" type="button">Practise again</button>
+    </section>
+
+    <p class="footer-note" id="footerNote">Made for learners. Free practice, wherever you are.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
